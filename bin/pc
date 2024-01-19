@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+test "${DEBUG:-0}" = "1" && set -x
+
+xclip -out -selection clipboard
+

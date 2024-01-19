@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+test "${DEBUG:-0}" = "1" && set -x
+
+if [[ -t 0 ]]; then
+  echo "$@" | xclip -in -selection clipboard
+else
+  xclip -in -selection clipboard
+fi
+
