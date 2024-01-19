@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+test "${DEBUG:-0}" = "1" && set -x
+
+if [[ -t 0 ]]; then
+  nohup xdg-open "${@}" > /dev/null 2>&1
+else
+  xargs -I{} nohup xdg-open "{}" > /dev/null 2>&1
+fi
+
