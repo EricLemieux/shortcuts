@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+test "${DEBUG:-0}" = "1" && set -x
+
+while true; do
+  eval "$@"
+  inotifywait -qre close_write .
+done
+

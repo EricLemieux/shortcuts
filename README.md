@@ -30,6 +30,14 @@ Shortcut for `xclip -out -selection clipboard`, primarily used to paste into a p
 pc | something
 ```
 
+## w | Watch for changes
+
+Shortcut to watch for filesystem changes and execute some comamnd.
+
+```shell
+w mvn test
+```
+
 ## y | Yank
 
 Shortcut for `xclip -in`, primarily used to copy from a previous command.
