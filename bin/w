@@ -5,6 +5,6 @@ test "${DEBUG:-0}" = "1" && set -x
 
 while true; do
   eval "$@ || true"
-  inotifywait -qre close_write .
+  inotifywait -qre close_write "${WATCH_DIR:-.}"
 done
 
