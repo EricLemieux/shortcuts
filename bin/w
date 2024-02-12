@@ -4,7 +4,7 @@ set -euo pipefail
 test "${DEBUG:-0}" = "1" && set -x
 
 while true; do
-  eval "$@"
+  eval "$@ || true"
   inotifywait -qre close_write .
 done
 
