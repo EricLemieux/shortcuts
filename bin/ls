@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+test "0" = "1" && set -x
+
+exec /bin/ls --hyperlink=auto --color=auto "$@"
+

@@ -2,6 +2,14 @@
 
 <!-- Values should be added in alphabetical order -->
 
+## ls | ls
+
+Alias for ls with some defaults related to hyperlinking.
+
+```shell
+ls
+```
+
 ## o | Open
 
 Shortcut for `xdg-open`, primarily used to open urls.
@@ -28,6 +36,14 @@ Shortcut for `xclip -out -selection clipboard`, primarily used to paste into a p
 
 ```shell
 pc | something
+```
+
+## q | Quit
+
+Shortcut for exiting, usually used in combination with opening something, and closing the temporary terminal
+
+```shell
+echo 'https://example.com | o && q
 ```
 
 ## w | Watch for changes
